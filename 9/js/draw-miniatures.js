@@ -18,4 +18,4 @@ const creatMiniatures = (picturesData) => {
   pictures.appendChild(fragment);
 };
 
-export {creatMiniatures};
+export {creatMiniatures, pictures};
