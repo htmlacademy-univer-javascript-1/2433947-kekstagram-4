@@ -103,7 +103,7 @@ const createComments = (commentsData) => {
 };
 
 const createBigPictureData = (evt) => {
-  const miniature = picturesData.find((picture) => picture.id === evt.target.id);
+  const miniature = picturesData.find((picture) => picture.id === evt.target.dataset.miniatureId);
   bigPicture.querySelector('.big-picture__img').src = miniature.url;
   bigPicture.querySelector('.likes-count').textContent = miniature.likes;
   bigPicture.querySelector('.comments-count').textContent = miniature.comments.length;

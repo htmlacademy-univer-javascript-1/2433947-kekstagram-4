@@ -10,7 +10,7 @@ const creatMiniatures = (picturesData) => {
     newPicture.querySelector('.picture__img').alt = picture.description;
     newPicture.querySelector('.picture__likes').textContent = picture.likes;
     newPicture.querySelector('.picture__comments').textContent = picture.comments.length;
-    newPicture.setAttribure('id', picture.id);
+    newPicture.dataset.miniatureId = picture.id;
 
     fragment.appendChild(newPicture);
   });
