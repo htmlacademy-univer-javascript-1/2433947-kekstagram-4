@@ -1,7 +1,9 @@
+import {picturesData} from './main.js';
+
 const pictureTemplate = document.querySelector('#picture').content;
 const pictures = document.querySelector('.pictures');
 
-const creatMiniatures = (picturesData) => {
+const creatMiniatures = () => {
   const fragment = document.createDocumentFragment();
 
   picturesData.forEach((picture) => {
@@ -10,6 +12,7 @@ const creatMiniatures = (picturesData) => {
     newPicture.querySelector('.picture__img').alt = picture.description;
     newPicture.querySelector('.picture__likes').textContent = picture.likes;
     newPicture.querySelector('.picture__comments').textContent = picture.comments.length;
+    newPicture.id = picture.id;
 
     fragment.appendChild(newPicture);
   });
